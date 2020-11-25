@@ -3,6 +3,11 @@
     <h1 style="color: red">
       {{msg}}
     </h1>
+    <ul>
+      <li v-for="(item,index) in  userList" v-bind:key="index">
+        {{item.id+' '+item.username}}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -11,8 +16,20 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: '校园超市'
+      msg: '校园超市',
+      userList: []
     }
+  },
+  methods:{
+    test(){
+      this.api.getUserList().then(res=>{
+        this.userList = res.data.data.result
+        console.log(res)
+      })
+    }
+  },
+  mounted() {
+    this.test()
   }
 }
 </script>
