@@ -13,6 +13,7 @@
 
 <script>
 import AsideMenu from './components/asideMenu'
+
 export default {
   name: "layout",
   components: {
@@ -22,7 +23,6 @@ export default {
 </script>
 
 <style>
-
 
 
 </style>

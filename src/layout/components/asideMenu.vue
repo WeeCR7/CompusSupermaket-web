@@ -45,8 +45,8 @@ export default {
       isCollapse: true
     };
   },
-  methods:{
-    handleOpenOrCloseMenu(){
+  methods: {
+    handleOpenOrCloseMenu() {
       this.isCollapse = !this.isCollapse
     }
   }
